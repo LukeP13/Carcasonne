@@ -1,0 +1,13 @@
+nombre_jugadors 2
+jugadors_cpu 1 2
+rajola_inicial CCFCV
+rajoles
+VFFVV 2
+XCCCV 2
+FFVFV 3
+MFFFF 1
+MFCFF 2
+XCCCC 1
+CCCFF 1
+#
+#

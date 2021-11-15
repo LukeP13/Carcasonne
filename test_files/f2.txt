@@ -1,0 +1,7 @@
+nombre_jugadors 4
+rajola_inicial CCCFF
+rajoles
+CCCFF 5
+CFCFC 5
+#
+#

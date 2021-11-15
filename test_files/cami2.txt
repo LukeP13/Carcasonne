@@ -1,0 +1,52 @@
+	public void puntuarCami(char direcc, Posicio p) {
+		int punts = 0;
+		Seguidor seguidor = null;
+		Posicio pSeg = null;
+		Casella inicial = _t[p.getX()][p.getY()];
+		if(_t[p.getX()][p.getY()].rajola().seguidorTipus(direcc, 'C')) {
+			seguidor = _t[p.getX()][p.getY()].rajola().seguidor();
+			pSeg = p.clone();
+		}
+		punts++;
+		modificarPosicio(direcc, p); 
+		if(_t[p.getX()][p.getY()].ocupada() && (!migEspecial(p) || _t[p.getX()][p.getY()].rajola().rajolaEspecial())) direcc = modificarDireccioCami(direcc, p); 
+		while (_t[p.getX()][p.getY()].ocupada() && (!migEspecial(p) || _t[p.getX()][p.getY()].rajola().rajolaEspecial()) && _t[p.getX()][p.getY()] != inicial) {
+			if(_t[p.getX()][p.getY()].rajola().teSeguidor() && _t[p.getX()][p.getY()].rajola().seguidorTipus('Q', 'C')){ //Per mirar si el seguidor es a un cami
+				seguidor = _t[p.getX()][p.getY()].rajola().seguidor();
+				pSeg = p.clone();		
+			}
+			punts++;
+			modificarPosicio(direcc, p);
+			if(_t[p.getX()][p.getY()].ocupada() && (!migEspecial(p) || _t[p.getX()][p.getY()].rajola().rajolaEspecial())) {
+				direcc = modificarDireccioCami(direcc, p);
+			}
+		}
+		if(_t[p.getX()][p.getY()].ocupada() && migEspecial(p) && _t[p.getX()][p.getY()] != inicial) {
+			punts++;
+			direcc = direccioContraria(direcc);
+			if (_t[p.getX()][p.getY()].rajola().seguidorTipus(direcc, 'C')) {
+				seguidor =  _t[p.getX()][p.getY()].rajola().seguidor();
+				pSeg = p.clone();
+			}
+		}
+		if(pSeg != null && _t[p.getX()][p.getY()].ocupada()){
+			seguidor.puntua(punts);
+			retornarSeguidor(pSeg);
+		}
+	}
+	
+	public boolean afegirRajola(Rajola r, Posicio p, Group grupCaselles, Image imatgeCasella, Pane root) {
+		boolean afegida = false;
+		if(posicioValida(p.getX(), p.getY()) && !_t[p.getX()][p.getY()].ocupada()) {
+			if(teAdjacent(p) && coincideix(r, p)) {
+				if(esLimit(p)) {
+					expandir(grupCaselles, imatgeCasella, root);
+					p.setX(p.getX()+1);
+					p.setY(p.getY()+1);
+				}
+				_t[p.getX()][p.getY()].afegir(r);
+				afegida = true;
+			}
+		}
+		return afegida;
+	}

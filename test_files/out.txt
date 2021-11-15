@@ -1,0 +1,24 @@
+-------------- PARTIDA INICIADA ---------------
+
+----------- Torn de Jugador 1 -----------
+Rajola obtinguda: MFFFF
+*Carta descartada*
+Rajola obtinguda: CCCFF
+*Carta descartada*
+Rajola obtinguda: XCCCV
+*Carta descartada*
+Rajola obtinguda: CFCFC
+*Carta descartada*
+Rajola obtinguda: CFCFC
+*Carta descartada*
+Rajola obtinguda: MFCFF
+*Carta descartada*
+Rajola obtinguda: CFCFC
+Rajola CCFCF colocada a la posició -> [2,3]
+No coloca seguidor, passa torn
+
+----------- Torn de Jugador 2 -----------
+Rajola obtinguda: CFCFC
+Rajola CFCFC colocada a la posició -> [3,2]
+
+----------- PARTIDA FINALITZADA -----------

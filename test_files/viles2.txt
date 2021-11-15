@@ -1,0 +1,10 @@
+nombre_jugadors 2
+rajola_inicial VVVVV
+rajoles
+VVVVV 50
+FFVFV 50
+VVFVV 50
+FFFFV 50
+VFFVV 50
+#
+#

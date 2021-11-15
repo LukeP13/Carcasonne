@@ -1,0 +1,9 @@
+nombre_jugadors 2
+rajola_inicial XCCCV
+rajoles
+CCCFF 100
+XCCCV 100
+CFCFC 50
+MFFFF 10
+#
+#

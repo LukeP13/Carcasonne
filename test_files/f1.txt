@@ -1,0 +1,11 @@
+nombre_jugadors 3
+rajola_inicial XCCCV
+rajoles
+CCCFF 30
+XCCCV 30
+CFCFC 20
+MFCFF 20
+MFFFF 40
+XCCCC 5
+#
+#

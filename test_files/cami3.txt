@@ -1,0 +1,9 @@
+nombre_jugadors 4
+rajola_inicial CFCFC
+rajoles
+VCCVV 50
+CCCFF 50
+XCCCC 50
+CFCFC 50
+#
+#
